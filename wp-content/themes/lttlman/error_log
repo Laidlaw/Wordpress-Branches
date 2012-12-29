@@ -1,0 +1,2 @@
+[16-Nov-2012 20:35:59] PHP Fatal error:  Call to undefined function  get_header() in /home/littlema/public_html/lttlman.com/wp-content/themes/lttlman/page.php on line 14
+[17-Nov-2012 22:19:59] PHP Fatal error:  Call to undefined function  get_header() in /home/littlema/public_html/lttlman.com/wp-content/themes/lttlman/page.php on line 14
