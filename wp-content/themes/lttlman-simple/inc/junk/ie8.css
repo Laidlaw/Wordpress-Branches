@@ -1,0 +1,18 @@
+.page-id-30 #featured-wrapper-inner img {
+  width: auto;
+  display: block;
+}
+
+.wcd_list li .avatar img {
+  min-width: 140px;
+  display: block;
+}
+
+.home #gform_wrapper_1 .my-gravity input {
+  padding-top: 7px;
+  height: 25px;
+}
+
+.my-gravity li.date-select {
+  clear: left;
+}

@@ -1,0 +1,15 @@
+#header-wrapper {
+  position:relative;
+  z-index:3000;
+}
+
+#gform_wrapper_1 {
+
+  z-index:2003;
+  position:absolute;
+  top:0;
+}
+
+.hero {
+  line-height:0;
+}
