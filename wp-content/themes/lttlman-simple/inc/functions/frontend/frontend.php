@@ -7,12 +7,11 @@ function scm_before_page_content() {
 
 //////////// HEADER
 function scm_logo_and_nav() { ?>
-
-<div class="row">
-    <div class="logo fl">
-      <h1><a href="<?php echo site_url(); ?>">Logo</a></h1>
-    </div>
-    <?php wp_nav_menu( array( 'container' => 'false ', 'menu_class' => 'nav nav--block fr', 'theme_location' => 'primary' ) ); ?>
+<div class="header_wrap">
+  <div class="row">   
+        <h1 class="menu-link fl"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+      <?php wp_nav_menu( array( 'container' => 'false ', 'menu_class' => 'nav nav--block fr', 'theme_location' => 'primary' ) ); ?>
+  </div>
 </div>
 <!-- End Header and Nav -->
 <?php }
@@ -95,7 +94,7 @@ function scm_footer() { ?>
 
 function scm_after_footer() {
   if (is_page("home")) {
-    include 'tour_guide.php';
+    // include 'tour_guide.php';
   }
 }
 

@@ -1,9 +1,9 @@
 jQuery(function($){
 
 	$(window).load(function() {
-	  $("#tour-guide").joyride();
-		$('#slider').orbit();
-		$('div.orbit-caption').wrap('<div class="caption-outer" />');
+	  //$("#tour-guide").joyride();
+	//$('#slider').orbit();
+		//$('div.orbit-caption').wrap('<div class="caption-outer" />');
 	});
 /*
 palm

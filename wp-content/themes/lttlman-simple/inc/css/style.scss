@@ -41,7 +41,7 @@ a:hover {
   text-decoration: none;
   color: $darkerbrand;
 }
-
+/*
 .logo {
   @extend .one-fifth;
   margin-top: 1.2em;
@@ -58,11 +58,16 @@ a:hover {
     display: block;
   }
 }
+*/
+.header_wrap {
+  background-color: #666;
+
+}
 hr {
   border-color: $brand-color;
 }
 #menu-primary {
-  margin-top:3.8rem;
+  // margin-top:3.8rem;
   //li {text-align:right;}
 
 }
