@@ -1,0 +1,64 @@
+$maincolor: #0adfef;
+/*generic default tone for non interactive elements*/
+$tone:  #a7b0b2;  .tone{background-color:$tone} 
+
+
+
+/*favorite greys for warm interactve elements*/
+$g0:  #ffffff;     .g0{background-color:$g0}
+$g1:  #f6f6f6;     .g1{background-color:$g1}
+$g2:  #d7d5cf;     .g2{background-color:$g2}
+$g3:  #bdbab6;     .g3{background-color:$g3}
+$g4:  #9f9d99;     .g4{background-color:$g4}
+$g5:  #565753;     .g5{background-color:$g5}
+$g6:  #333333;     .g6{background-color:$g6}
+$g7:  #222222;     .g7{background-color:$g7}
+$g8:  #111111;     .g8{background-color:$g8}
+$g9:  #000000;     .g9{background-color:$g9}
+
+
+
+/* Red Hat toners */
+$rh-base: #60605b;   .rh-base        {background-color:$rh-base}
+                     .rhbase-light   {background-color: lighten( $rh-base, 34% )}
+
+$rh-cream: #dedcc1;   .rh-cream      {background-color:$rh-cream}
+
+
+/*Red Hat Official*/
+$rh-red1:      #cc0000;     .rh-red1       {background-color:$rh-red1}
+$rh-red2:      #9e292b;     .rh-red2       {background-color:$rh-red2}
+$rh-red3:      #781f1c;     .rh-red3       {background-color:$rh-red3}
+
+$rh-blue:      #4e9fdd;     .rh-blue       {background-color:$rh-blue}
+$rh-lightblue: #bfdce8;     .rh-lightblue  {background-color:$rh-lightblue}
+$rh-teal:      #2c8596;     .rh-teal       {background-color:$rh-teal}
+$rh-dark-blue: #003d6e;     .rh-dark-blue  {background-color:$rh-dark-blue}
+$rh-lime:      #e3e936;     .rh-lime       {background-color:$rh-lime}
+$rh-green:     #afbf27;     .rh-green      {background-color:$rh-green}
+$rh-purple:    #564979;     .rh-purple      {background-color:$rh-purple}
+$rh-orange:    #dc9f2e;     .rh-orange      {background-color:$rh-orange}
+
+
+/* Red Hat Apps  - Web Extended */
+
+/*orange (the letter o)*/
+
+$o7:    #400;     .o7      {background-color:$o7}
+$o6:    #b30;     .o6      {background-color:$o6}
+$o5:    #c40;     .o5      {background-color:$o5}
+$o4:    #e70;     .o4      {background-color:$o4}
+$o3:    #fa0;     .o3      {background-color:$o3}
+$o2:    #fc3;     .o2      {background-color:$o2}
+$o1:    #fea;     .o1      {background-color:$o1}
+
+/*green*/
+
+$link-light: #39f;   .link-light    {background-color:$link-light}
+$link: #05f;         .link          {background-color:$link}
+$link-dark: #039;    .link-dark     {background-color:$link-dark}
+
+
+$green1: #a3d541; .green1     {background-color:$green1}
+$green2: #57a81c; .green2     {background-color:$green2}
+$green3: #286200; .green3     {background-color:$green3}

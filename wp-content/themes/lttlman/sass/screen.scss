@@ -1,0 +1,231 @@
+//@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout/sticky-footer";
+@import "compass/typography/vertical_rhythm";
+@import "lib/grid";
+@import "lib/colors";
+@import "lib/base";
+
+//@import "compass/typography/text/replacement"; 
+//@import "grids";
+
+@mixin serif($font-family, $adjust-size, $font-style: normal, $font-weight:100) {
+	font-family: $font-family, serif;
+	font-style: $font-style;
+	font-weight: $font-weight;
+	@include adjust-font-size-to($adjust-size);
+}
+%titlefont {
+	font-family: "oxtail",sans-serif;
+	} 
+
+%displayfont1 {
+	font-family: abril-fatface, serif;
+}
+
+$base-font-size: 10px;
+$base-line-height: 14px;
+@include establish-baseline;
+
+// BASIC RESETS
+h1, h2 {
+	//text-align:center;
+}
+a:-webkit-any-link {
+	text-decoration:none;
+}
+
+li { list-style:none; }
+
+// ESTABLISH PAGE WIDTHS
+#page, .site-footer {
+  //@extend .container;
+  width:100%;
+}
+.site-header hgroup, .site-main {
+	@include spread(90%);
+	margin:0 auto;
+}
+
+// ESTABLISH BLOCK LEVEL GRIDS
+.sidebar, .section-nav {@include column(3); }
+#primary { @include column(7); }
+.footnotes { @include column(2); @include last; }
+
+.sidebar, .main-nav-holder {
+	position:relative;
+}
+
+#section-nav {margin-top:3em;}
+.sticky {
+	#section-nav { position:fixed; top:0;
+		ul {}
+	}
+	#primary {@include prepend(3);}
+}
+
+/*
+.js .site-navigation {
+	position: static;
+	float: left;
+	width: 20%;
+	height: 100%;
+	
+}
+.site.active {
+	left: 0;
+}
+.site-main {
+	clear: none;
+	margin-left: 20%;
+}
+*/
+
+.site-header, .site-main, .site-footer {
+	overflow:hidden;
+}
+#masthead {
+	min-height: 23em;
+	display: block;
+	hgroup {
+		h1 {
+			margin-bottom:3rem;
+			text-align:left;
+			/*@extend %titlefont;*/
+			letter-spacing: -.1em;
+			font-size:15em;
+			text-decoration:none;
+			line-height: .8em;
+		}
+	}
+}
+.main-navigation .menu {
+
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+
+	li {
+		display:inline;
+		float:none;
+		a {
+			display:inline-block;
+			padding:1rem 1.6rem;
+			&.selected {color:#111;}
+		}
+	}
+}
+
+
+
+
+.site-description {
+	display:none;
+}
+.site-navigation {
+	float:left;
+}
+
+#section-nav li a {
+	&.selected {color:#eee;}
+}
+article {	
+	h1 {
+		//@include serif(georgia, 10px, normal, bold);
+		font-color:#eee;
+		@include serif(georgia, 14px, none, 100);
+		text-align: center;
+		text-decoration: underline;
+		text-transform:uppercase;
+		letter-spacing:.2em;
+	}
+}
+// GOOFY LTTLMAN HEADER EFFECT //
+.char5 {
+   -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease;
+}
+h1.site-title a span {letter-spacing:-3px;}
+h1.site-title a:hover .char5 {
+   // vertical-align: top;
+    margin-left: 0.227em;
+}
+.inserted {
+  display:none;
+  font-size:0;
+}
+
+#post-2 p {
+	@include serif(georgia, 12px, italic, 100);
+	@media only screen and (min-width: 35em) {
+	@include serif(georgia, 16px, italic, 100);
+	}
+	
+}
+
+article p {font-size:3em;}
+
+.top {
+	position:fixed;
+	right:15px;
+	bottom:15px;
+	width:50px;
+	height:25px;
+	padding-top:25px;
+	line-height:25px;
+	background:#333;
+	color:#888;
+	display:block;
+	text-transform:uppercase;
+	text-decoration:none;
+	text-align:center;
+	font-size:14px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	behavior:url(../PIE.htc);
+}
+
+.top:before {
+	position:absolute;
+	top:11px;
+	left:14px;
+	content:"";
+	border-bottom:11px solid #888;
+	border-left:11px solid transparent;
+	border-right:11px solid transparent;
+}
+
+.top:hover {
+	color:#eee;
+}
+
+.top:hover:before {
+	border-bottom-color:#eee;
+}
+
+.opacity .top {
+	opacity:1;
+	-webkit-transition:opacity 700ms linear;
+	-moz-transition:opacity 700ms linear;
+	transition:opacity 700ms linear;
+}
+
+.opacity .top.hidden {
+	opacity:0;
+}
+
+.no-opacity .top.hidden {
+	display:none;
+}
+
+@include sticky-footer(354px, "#page", "#sub-site-footer", ".site-footer");
+
+@media only screen and (min-width: 35em) {
+  @import "layout/medium";
+}
+
+@media only screen and (min-width: 55em) {
+  @import "layout/large";
+}
+
