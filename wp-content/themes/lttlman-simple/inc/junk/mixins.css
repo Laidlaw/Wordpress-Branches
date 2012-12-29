@@ -1,0 +1,25 @@
+/*.custom-button {
+  background: url('../images/bt-getintouch.jpg') no-repeat 0 0;
+  height: 30px;
+  width: 124px;  
+  display: block;
+  cursor: pointer;
+  padding-right: 10px;
+  text-indent: -1000px;
+  overflow: hidden;
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}
+
+.strong {
+  font-weight: bold;
+}*/
+.uses-pie {
+  behavior: url(/wp-content/themes/wordpress_scmthemes/scm_smartauto/PIE.htc);
+  position: relative;
+}
+/* Mixins.less
+ * Snippets of reusable CSS to develop faster and keep code readable
+ * ----------------------------------------------------------------- */
