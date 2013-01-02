@@ -1,0 +1,98 @@
+/*!
+THEME NAME: SCM Tour
+THEME URI: http://southcentralmedia.com
+DESCRIPTION: A custom theme for South Central Media's Tour site
+VERSION: 1.0
+AUTHOR: South Central Media
+AUTHOR URI: http://southcentralmedia.com
+TEMPLATE: heisenberg
+
+*/
+@charset "UTF-8";
+/*------------------------------------*\
+    YOUR-PROJECT.CSS
+\*------------------------------------*/
+/**
+ *
+ * sass --watch your-project.scss:your-project.min.css --style compressed
+ *
+ * Here we set up some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
+
+
+/**
+ * Setup
+ */
+@import "vars";
+@import "inuit.css/inuit";
+
+
+/**
+ * She’s all yours, cap’n... Begin importing your stuff here.
+ */
+@import "specific/global";
+@import "specific/typography";
+@import "specific/orbit";
+@import "specific/joyride";
+
+a {color: $brand-color;}
+a:hover {
+  text-decoration: none;
+  color: $darkerbrand;
+}
+
+.logo {
+  @extend .one-fifth;
+  margin-top: 1.2em;
+
+  a {
+    background: $brand-color;
+    @extend .brand-face;
+    color:white;
+    @include vendor(border-radius, 4rem);
+    @include font-size(30px);
+    line-height: 3.3;
+    width: 7rem;
+    height: 7rem;
+    display: block;
+  }
+}
+hr {
+  border-color: $brand-color;
+}
+#menu-primary {
+  margin-top:3.8rem;
+  //li {text-align:right;}
+
+}
+#slider {
+  margin:0 auto;
+  text-align: center;
+  img {width:100%;}
+}
+.prologue {@extend .section-break;}
+.entry {
+  text-align: center;
+  margin:0 10rem;
+  @include media-query(portable){
+      margin: 0;
+      text-align:left;
+    }
+  }
+.callout {
+  background: $light-gray;
+  border-top: 1px solid $dark-gray;
+  @extend .section-break;
+
+}
+.sidebar {
+  ul {
+    @extend .block-list;
+    li {
+    padding-left:0;
+    border: 0;
+    @extend .zeta;
+    }
+  }
+}
