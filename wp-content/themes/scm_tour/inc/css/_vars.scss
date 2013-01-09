@@ -23,7 +23,7 @@ $global-border-box: true;
 
 
 /**
- * Base stuff
+ * Base stuff: typography and spacing
  */
 
 $mid-gray: #acacac /* #7c8180 */;
@@ -33,14 +33,12 @@ $dark-gray: #d5d5d5;
 $base-font-size:    14px!default;
 $base-line-height:  24px!default;
 $base-font-color:   $mid-gray;
-@include establish-baseline;
-
 
 /**
  * How big would you like round corners to be by default?
  */
 $brand-round:        4px!default;
-
+$section-space:     4rem;
 
 /**
  * Responsiveness?
@@ -72,18 +70,22 @@ $micro-size:        10px!default;
 /**
  * Brand stuff
  */
-$brand-color:       #555!default;
+$brand-color:       #00d0ef!default;
 $darkerbrand:       $brand-color - #333333!default;
 $brand-color-2:     #96907d!default;
-$brand-face:        "helvetica", sans-serif!default;
-$brand-face-2:      "baskerville", sans-serif!default;
+$brand-face:        "wisdom", sans-serif!default;
+$brand-face-2:      "nexa", sans-serif!default;
+
+
+@mixin brandGradient($top, $bottom) {
+  @include background-image(linear-gradient($top, $bottom)); }
+
 
 /**
  * inuit.css will work these next ones out for you.
  *
  * Assign our `$base-line-height` to a new spacing var for more transparency.
  */
-$section-space:     4rem;
 $base-spacing-unit: $base-line-height!default;
 $half-spacing-unit: $base-spacing-unit / 2!default;
 $line-height-ratio: $base-line-height / $base-font-size;

@@ -1,10 +1,10 @@
 /*!
-THEME NAME: Lttlman - simple
+THEME NAME: SCM Tour
 THEME URI: http://southcentralmedia.com
 DESCRIPTION: A custom theme for South Central Media's Tour site
 VERSION: 1.0
 AUTHOR: South Central Media
-AUTHOR URI: http://alanlaidlaw.com
+AUTHOR URI: http://southcentralmedia.com
 TEMPLATE: heisenberg
 
 */
@@ -35,56 +35,47 @@ TEMPLATE: heisenberg
 @import "specific/global";
 @import "specific/typography";
 @import "specific/orbit";
-//@import "specific/joyride";
+@import "specific/joyride";
 
 a {color: $brand-color;}
 a:hover {
   text-decoration: none;
   color: $darkerbrand;
 }
-body, p {
-  font-family: "Helvetica Neue", sans-serif;
-  color: $base-font-color;
-
-}
-
-h1, h3, .nav a {
-  font-family: $brand-face;
-}
-h3, .nav li a {
-  letter-spacing: .2em;
-}
-.nav a {
-  font-weight: bold;
-  font-size: 14px;
-
-}
-h2 { @extend .brand; }
-.row h2 {font-size: 2.5rem;}
-.callout h3 {
-   color: $brand-color-2;
-}
 
 .logo {
   @extend .one-fifth;
-  margin:0;
-  a {   
+  margin-top: 1.2em;
+
+  a {
+    @include brandGradient($brand-color, $darkerbrand);
     @extend .brand-face;
-    color:#111;
-    @include adjust-font-size-to(12px);
+    color:white;
+    @include vendor(border-radius, 4rem);
+    @include font-size(30px);
+    line-height: 3.3;
+    width: 6.4rem;
+    height: 6.4rem;
     display: block;
-
+    &:hover {@include brandGradient($darkerbrand, #016D8F);}
   }
-}
-
-.header_wrap {
-  border-bottom: 1px solid #666;
-  
-  
 }
 hr {
   border-color: $brand-color;
 }
+#menu-primary {
+  margin-top:3.8rem;
+  //li {text-align:right;}
+
+}
+#slider {
+  margin:0 auto;
+  text-align: center;
+
+  img {width:100%; display:none;}
+
+}
+
 
 .prologue {@extend .section-break;}
 .entry {
@@ -96,6 +87,20 @@ hr {
     }
   }
 
+
+.callout {
+  background: $light-gray;
+  border-top: 1px solid $dark-gray;
+  border-bottom: 3px solid $brand-color;
+  @extend .section-break;
+
+  img {
+    background: whiteSmoke;
+    padding: 3px;
+    @include single-box-shadow(#666666, 0px, 2px, 3px, false, false);
+  }
+
+}
 .sidebar {
   ul {
     @extend .block-list;

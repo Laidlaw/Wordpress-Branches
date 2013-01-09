@@ -1,4 +1,4 @@
-
+/*
 @font-face {
     font-family: 'wisdom';
     src: url('../lttlman-simple/inc/fonts/WisdomScript.otf');
@@ -12,31 +12,9 @@
     font-weight: normal;
     font-style: normal;
 }
+*/
 
 
-body, p {
-  font-family: "Helvetica Neue", sans-serif;
-  color: $base-font-color;
-
-}
-
-h1, h3, .nav a {
-  font-family: $brand-face-2;
-}
-h3, .nav li a {
-  text-transform: uppercase;
-  letter-spacing: .2em;
-}
-.nav a {
-  font-weight: bold;
-  font-size: 14px;
-  color: $brand-color;
-}
-h2 { @extend .brand; }
-.row h2 {font-size: 2.5rem;}
-.callout h3 {
-   color: $brand-color-2;
-}
 /*
 @font-face {
     font-family: 'LeagueGothicRegular';

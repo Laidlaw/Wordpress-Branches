@@ -9,8 +9,9 @@ function scm_before_page_content() {
 function scm_logo_and_nav() { ?>
 <div class="header_wrap">
   <div class="row">   
-        <h1 class="menu-link fl"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+        <h1 class="logo fl"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
       <?php wp_nav_menu( array( 'container' => 'false ', 'menu_class' => 'nav nav--block fr', 'theme_location' => 'primary' ) ); ?>
+      <?php // Ωget_search_form( $echo ); ?>
   </div>
 </div>
 <!-- End Header and Nav -->
@@ -43,40 +44,6 @@ function scm_before_footer() {
 if (is_page("home")) {
   ?>
 
-<!-- Call to Action Panel -->
-<div class="one-whole callout">
-  <div class="row">
-  	<ul class="gw">
-      <li class="g one-third" id="numero1">
-        <h3>Content</h3>
-        <img src="http://placehold.it/400x300&text=[img]" />
-        <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-          <a class="fr">Read More</a>
-      </li>
-
-      <li class="g one-third" id="numero2">
-        <h3>Content</h3>
-        <img src="http://placehold.it/400x300&text=[img]" />
-        <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-      </li>
-
-      <li class="g one-third" id="numero3">
-
-      <?php if(function_exists( 'ot_get_option' )) {
-        $scm_email_address = ot_get_option( 'scm_email_address' );
-        $scm_phone_number = ot_get_option( 'scm_phone_number' );
-        $scm_linkedin = ot_get_option( 'scm_linkedin' );
-      }?>
-
-        <h3>Content</h3>
-        <img src="http://placehold.it/400x300&text=[img]" />
-        <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-        <a href="mailto:<?php echo $scm_email_address; ?>" class="email">Email Address</a>
-      </li>
-
-    </ul>
-  </div><!-- end row -->
-</div>
 	<?php } }
 
 
