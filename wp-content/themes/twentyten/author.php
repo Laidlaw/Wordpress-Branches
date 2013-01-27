@@ -9,9 +9,16 @@
 
 get_header(); ?>
 
-		<div id="container">
+
 			<div id="content" role="main">
 
+
+
+<?php get_sidebar(); ?>
+
+
+
+ <div id="rightside">
 <?php
 	/* Queue the first post, that way we know who
 	 * the author is when we try to get their name,
@@ -56,5 +63,4 @@ if ( get_the_author_meta( 'description' ) ) : ?>
 			</div><!-- #content -->
 		</div><!-- #container -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

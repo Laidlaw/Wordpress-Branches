@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: One column, no sidebar
+ * Template Name:one column , no side bar
  *
  * A custom page template without sidebar.
  *
@@ -14,8 +14,8 @@
 
 get_header(); ?>
 
-		<div id="container" class="one-column">
-			<div id="content" role="main">
+<div id="content" role="main">
+<div class="wrapper-center" >
 
 			<?php
 			/* Run the loop to output the page.
@@ -24,8 +24,7 @@ get_header(); ?>
 			 */
 			 get_template_part( 'loop', 'page' );
 			?>
-
+</div>
 			</div><!-- #content -->
-		</div><!-- #container -->
 
 <?php get_footer(); ?>

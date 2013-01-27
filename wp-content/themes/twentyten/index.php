@@ -13,20 +13,31 @@
  * @since Twenty Ten 1.0
  */
 
-get_header(); ?>
+get_header(); 
+//get_header("home"); 
+?>
 
-		<div id="container">
-			<div id="content" role="main">
+			<div id="content">
+		
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-			<?php
-			/* Run the loop to output the posts.
-			 * If you want to overload this in a child theme then include a file
-			 * called loop-index.php and that will be used instead.
-			 */
-			 get_template_part( 'loop', 'index' );
-			?>
-			</div><!-- #content -->
+				
+
+<?php the_content(); ?>
+						
+				
+
+<?php endwhile; // end of the loop. ?>
 		</div><!-- #container -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+</div>
+<?php
+	/* Always have wp_footer() just before the closing </body>
+	 * tag of your theme, or you will break many plugins, which
+	 * generally use this hook to reference JavaScript files.
+	 */
+
+	wp_footer();
+?>
+</body>
+</html>

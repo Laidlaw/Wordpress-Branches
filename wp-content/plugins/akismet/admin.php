@@ -747,4 +747,3 @@ function akismet_server_connectivity_ok() {
 	$servers = akismet_get_server_connectivity();
 	return !( empty($servers) || !count($servers) || count( array_filter($servers) ) < count($servers) );
 }
-

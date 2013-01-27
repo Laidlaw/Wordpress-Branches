@@ -8,11 +8,12 @@
  * @subpackage Twenty_Ten
  * @since Twenty Ten 1.0
  */
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
+?>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>><head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<title><?php
+<title>
+<?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
 	 */
@@ -32,10 +33,27 @@
 	if ( $paged >= 2 || $page >= 2 )
 		echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
 
-	?></title>
+	?>
+</title>
+<link rel="stylesheet" href="http://digitalkickoff.com/parisgordon.com/wp-content/themes/pg/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css" type="text/css" media="all" />
+<link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery-1.6.2.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+
+<!--jQuery Library
+<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/jquery-1.4.2.min.js" ></script>-->
+<!--Dropdown Menu-->
+<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/superfish.js"></script> 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/cloud-zoom.1.0.2.js"></script> 
+<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/cloud-zoom.1.0.2.min.js"></script> 
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/js/cloud-zoom.css " />
+
+
+
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
@@ -50,59 +68,22 @@
 	 */
 	wp_head();
 ?>
+
+<script> 
+$(document).ready(function(){
+  $("#top-menu li a").wrapInner("<span><span>" + "</span></span>");
+});
+</script>
 </head>
-
-<body <?php body_class(); ?>>
-<div id="wrapper" class="hfeed">
-	<div id="header">
-		<div id="masthead">
-			<div id="branding" role="banner">
-				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
-				<<?php echo $heading_tag; ?> id="site-title">
-					<span>
-						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					</span>
-				</<?php echo $heading_tag; ?>>
-				<div id="site-description"><?php bloginfo( 'description' ); ?></div>
-
-				<?php
-					// Compatibility with versions of WordPress prior to 3.4.
-					if ( function_exists( 'get_custom_header' ) ) {
-						// We need to figure out what the minimum width should be for our featured image.
-						// This result would be the suggested width if the theme were to implement flexible widths.
-						$header_image_width = get_theme_support( 'custom-header', 'width' );
-					} else {
-						$header_image_width = HEADER_IMAGE_WIDTH;
-					}
-
-					// Check if this is a post or page, if it has a thumbnail, and if it's a big one
-					if ( is_singular() && current_theme_supports( 'post-thumbnails' ) &&
-							has_post_thumbnail( $post->ID ) &&
-							( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' ) ) &&
-							$image[1] >= $header_image_width ) :
-						// Houston, we have a new header image!
-						echo get_the_post_thumbnail( $post->ID );
-					elseif ( get_header_image() ) :
-						// Compatibility with versions of WordPress prior to 3.4.
-						if ( function_exists( 'get_custom_header' ) ) {
-							$header_image_width  = get_custom_header()->width;
-							$header_image_height = get_custom_header()->height;
-						} else {
-							$header_image_width  = HEADER_IMAGE_WIDTH;
-							$header_image_height = HEADER_IMAGE_HEIGHT;
-						}
-					?>
-						<img src="<?php header_image(); ?>" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" />
-					<?php endif; ?>
-			</div><!-- #branding -->
-
-			<div id="access" role="navigation">
-			  <?php /* Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentyten' ); ?>"><?php _e( 'Skip to content', 'twentyten' ); ?></a></div>
-				<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
-				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-			</div><!-- #access -->
-		</div><!-- #masthead -->
-	</div><!-- #header -->
-
-	<div id="main">
+<body  <?php $bg_class="";  if(is_front_page() || is_page("8") || is_page("188") || is_page("96")) $bg_class="home-bg"; elseif (is_page("120") || is_page("127") || is_page("133")) $bg_class="inner-bg"; elseif (is_page("133")) $bg_class="blue-bg"; else $bg_class="inner-bg2"; ?>  class="<?php  echo $bg_class; ?>" >
+<div id="main-container">
+<div id="header">
+<div id="header_inner" >
+  <div id="logo"> <a href="<?php echo home_url( '/' ); ?>/?page_id=8" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"> <img src="<?php bloginfo( 'template_url' ); ?>/image/logo.png" alt="site Logo" /> </a></div> </div>
+  <div class="wrapper-center">
+    <div id="top-menu">
+      <?php wp_nav_menu( array( 'container_class' => 'menu-header','menu_class' =>'sf-menu', 'theme_location' => 'primary' ) ); ?>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>

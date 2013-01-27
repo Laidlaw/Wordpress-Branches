@@ -1,0 +1,170 @@
+/*
+Theme Name:     Twenty Ten Child
+Theme URI:      http://parisgordon.com
+Description:    Child theme for the Twenty Ten theme 
+Author:         Shark Web Designs
+Author URI:     http://sharkwebdesigns.com/
+Template:       twentyeleven
+Version:        0.1.0
+*/
+
+@font-face {
+	font-family: ProximaNovaRegular;
+	src: url('ProximaNova-Light.otf');
+}
+
+#header { 
+	height:167px; 
+	margin:auto;
+	background:url(image/topbar.jpg) repeat-x left top;
+	position:relative;
+	border-bottom: 1px solid #000000;
+	}
+body {
+    font-family: 'ProximaNovaRegular', sans-serif,Arial, Verdana;
+	font-size:14px; 
+}
+a { 
+	color:#333333;
+}
+.ui-widget-content {
+    border: none;	
+    color: #222222;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-bottom-right-radius: 0px;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    border-bottom-left-radius: 0px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    border-top-right-radius: 0px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    border-top-left-radius: 0px;
+}
+input[type=text],textarea {
+	padding: 8px 7px;
+    border: 1px solid #bbbbbb;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a { 
+ 	background: url("http://digitalkickoff.com/parisgordon.com/wp-content/themes/twentyten/image/tab-selected-arrow.gif") no-repeat scroll center bottom transparent;
+    color: #333333;
+    cursor: text;
+    padding-bottom: 7px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
+    border-top: 1px dotted #BBBBBB;	
+	border-left: 1px dotted #BBBBBB;	
+	border-right: 1px dotted #BBBBBB;	
+	border-bottom: none;
+	background: url("http://digitalkickoff.com/parisgordon.com/wp-content/themes/twentyten/image/tab-selected-arrow.gif") no-repeat scroll center bottom transparent;
+	
+}
+.ui-tabs .ui-tabs-panel {
+    border: 1px dotted #BBBBBB;	
+	padding-bottom: 15px;
+}
+.ui-tabs {
+    padding: 0em; 
+}
+#tabs .ui-state-default {
+    background: none repeat scroll 0 0 #fff;
+    border: 0 none;
+}
+.ui-tabs .ui-tabs-nav {
+    margin: 0;
+    padding: 0 0 0;
+}
+.ui-widget-header
+{
+	background:#fff;
+	border:0px;
+}
+.ui-widget-content
+{
+	border: none;
+}
+#tabs .ui-state-default
+{
+ 	background:#fff;
+	border:0px;
+}
+#tabs .ui-state-active
+{
+	border:0px;
+	background:#FFFFFF;
+}
+
+#left-side {
+    float: left;
+    padding-right: none;
+    width: 1000px;
+}
+#right-side {
+    float: left;
+    padding-right: none;
+    width: 1000px;
+}
+#bottom-side {
+    float: left;
+    padding-right: none;
+    width: 980px;
+	background: #fff;
+	border-top: url("http://digitalkickoff.com/parisgordon.com/wp-content/themes/twentyten/image/bottom-widget-border.png") no-repeat scroll 0 0 transparent;
+}
+#dots-border, .dots-border  {
+    background: url("http://digitalkickoff.com/parisgordon.com/wp-content/themes/twentyten/image/nav-category-dots.gif") repeat scroll center bottom transparent;
+    clear: both;
+    font-size: 0;
+    height: 10px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+.products-grid .product-name a {
+    color: #333333;
+}
+.product-name a {
+    font-family: sans-serif,Arial, Verdana;
+	font-size: 12px;
+	font-weight: normal;
+}
+.products-grid .product-name {
+    font-family: sans-serif,Arial, Verdana;
+    font-size: 1.1em;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+.products-grid .price-box {
+    margin: 0;
+}
+.price-box { 
+line-height: 6px;
+}
+.regular-price {
+    display: inline;
+    margin: 0;
+}
+.regular-price .price {
+    color: #333333;
+    font-family: Georgia,"Times New Roman",sans-serif;
+    font-size: 1.2em;
+}
+.category-products .regular-price .price, .category-products .old-price .price, .category-products .special-price .price {
+    font-size: 1.2em;
+}
+.category-line, #category-line {
+	background: url("http://digitalkickoff.com/parisgordon.com/wp-content/themes/twentyten/image/nav-category-dots.gif") repeat scroll 0 0 transparent;
+    line-height: 1;
+    text-align: left;
+}
+#wpsc-latest-products, wpsc-latest-products, .wpsc-latest-products {
+
+}
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+    cursor: pointer;
+    font-weight: normal;
+	font-size: 10px;
+}
